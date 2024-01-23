@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+
+    <title>Lucky Draw</title>
+    <meta name="author" content="luckydraw.live">
+    <meta name="robots" content="index follow">
+    <meta name="googlebot" content="index follow">
+    <meta name="keywords" content="lucky draw, random name picker, random number generator">
+    <meta name="description" content="World's most sophisticated random number generator.">
+
+
+    <meta property="og:title" content="Lucky Draw">
+    <meta property="og:site_name" content="LuckyDraw.live">
+    <meta property="og:url" content="https://www.luckydraw.live">
+    <meta property="og:description" content="World's most sophisticated random number generator.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.luckydraw.live/images/luckydraw-v1.png">
+
+    <meta name="viewport" content="width=device-width" id="viewportMeta">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <style>
+        .loader-block {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            z-index: 999999;
+            position: fixed;
+            text-align: center;
+            background-color: #ffffff;
+            background-image: url(images/loader.svg);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    </style>
+
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NWZ9HX7');
+    </script>
+
+</head>
+
+<body ng-app="app" ng-class="'theme-' + theme">
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWZ9HX7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+    <div class="loader-block" id="loader"></div>
+    <link rel="stylesheet" href="styles/vendor-f1143d218a.css">
+
+    <link rel="stylesheet" href="styles/app-0316cbad9f.css">
+    <div class="wrapper" ng-style="{'background-image': url_background}">
+        <ui-view></ui-view>
+        <notification></notification>
+        <img ng-src="{{background}}" width="1" height="1" appbackground>
+    </div>
+
+    <script src="scripts/vendor-6980eb934c.js"></script>
+
+    <script src="scripts/app-717293a702.js"></script>
+</body>
+
+</html>
